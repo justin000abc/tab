@@ -1,7 +1,21 @@
+function _public(o){this.o = o;}
+_public.prototype.header_height = function(){
+    return this.o.innerWidth>991?0:(this.o.innerWidth>767?79:77);
+}
+function win_resize(callback){
+    var r_this = this;
+    r_this.or_ww = window.innerWidth;
+    $(window).on("resize",function(){
+        if(r_this.or_ww != window.innerWidth){
+            (callback && typeof(callback) === "function") && callback();
+            r_this.or_ww = window.innerWidth;
+        }
+    });
+}
 function Tab(args){
     var _ = this;
     _.html = $('html');
-    _.body = is_ios?$('body'):$('html');
+    _.body = navigator.userAgent.match(/iPhone|iPad/i)?$('body'):$('html');
     _.w = $(window);
     _.offset = new _public(window);
     _.document = $(document);
@@ -69,6 +83,7 @@ Tab.prototype.init = function(){
     _.o_item_tag = _.args.tab_item;
     _.t_item_tag = _.args.container_item;
     _.t = _.is_scroll?$(_.t_item_tag):$(_.t_item_tag,$(_.args.container));
+    console.log(_.t);
     _.option_max();
 }
 Tab.prototype.remove_tab_open = function(){
@@ -121,6 +136,6 @@ Tab.prototype.scroll_offset = function(w_top,cou){
     }
 }
 Tab.prototype.title_txt = function(i){
-    // var _ = this;
-    // _.title.text(_.tab_item[i].text());
+    var _ = this;
+    _.title.text(_.tab_item[i].text());
 }
