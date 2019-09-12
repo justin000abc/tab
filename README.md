@@ -2,7 +2,11 @@
 
 標籤頁  
 
-[CODEPEN](https://codepen.io/justin000abc/pen/OJLELWw)
+一般頁籤切換
+[CODEPEN](https://codepen.io/justin000abc/pen/OJLELWw)  
+
+計算畫面捲動到哪個項目
+[CODEPEN](https://codepen.io/justin000abc/pen/wvwXwgY)
 
 可依照不同需求設定參數，例如點了頁籤是否用fadeIn方式顯示內容，或是以滾動頁面方式找到內容位置  
 new Tab(option);  
