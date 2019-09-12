@@ -83,7 +83,6 @@ Tab.prototype.init = function(){
     _.o_item_tag = _.args.tab_item;
     _.t_item_tag = _.args.container_item;
     _.t = _.is_scroll?$(_.t_item_tag):$(_.t_item_tag,$(_.args.container));
-    console.log(_.t);
     _.option_max();
 }
 Tab.prototype.remove_tab_open = function(){
