@@ -4,9 +4,14 @@
 
 一般頁籤切換
 [CODEPEN](https://codepen.io/justin000abc/pen/OJLELWw)  
+![image](https://raw.githubusercontent.com/justin000abc/tab/master/img/tab3.gif)
 
-計算畫面捲動到哪個項目
+
+點了頁籤捲動到相對的位置
 [CODEPEN](https://codepen.io/justin000abc/pen/wvwXwgY)
+![image](https://raw.githubusercontent.com/justin000abc/tab/master/img/tab.gif)
+也可以計算目前畫面捲動到哪個項目
+![image](https://raw.githubusercontent.com/justin000abc/tab/master/img/tab2.gif)
 
 可依照不同需求設定參數，例如點了頁籤是否用fadeIn方式顯示內容，或是以滾動頁面方式找到內容位置  
 new Tab(option);  
