@@ -1,6 +1,6 @@
 function _public(o){this.o = o;}
 _public.prototype.header_height = function(){
-    return this.o.innerWidth>991?0:(this.o.innerWidth>767?79:77);
+    return this.o.innerWidth>767?50:40;
 }
 function win_resize(callback){
     var r_this = this;
@@ -112,7 +112,7 @@ Tab.prototype.click = function(x){
         _.option.slideUp();
     }
     if(_.is_scroll){
-        var h = window.innerWidth>767?0:72;
+        var h = window.innerWidth>767?0:10;
         _.body.animate({scrollTop: _.t_item[x].offset().top - _.offset.header_height() - h}, 500);
         _.title.removeClass('active');
     }else{
